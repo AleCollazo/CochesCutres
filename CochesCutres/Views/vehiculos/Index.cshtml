@@ -1,0 +1,87 @@
+﻿@model IEnumerable<CochesCutres.vehiculos>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listado</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumPuertas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kilometros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoVehiculo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MesesGarantia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstaStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumPuertas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kilometros)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoVehiculo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MesesGarantia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstaStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Foto)
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Edit", new { id = item.IdVehiculo }) |
+                    @Html.ActionLink("Detalle", "Details", new { id = item.IdVehiculo }) |
+                </td>
+            </tr>
+        }
+        @Html.ActionLink("Página de Inicio", "Index", "Home")
+
+    </table>
+</body>
+</html>

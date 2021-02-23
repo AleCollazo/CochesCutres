@@ -1,0 +1,98 @@
+﻿@model CochesCutres.vehiculos
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalle</title>
+</head>
+<body>
+    <div>
+        <h4>vehiculos</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Marca)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Marca)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Modelo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumPuertas)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumPuertas)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Color)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Color)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Kilometros)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Kilometros)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoVehiculo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoVehiculo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MesesGarantia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MesesGarantia)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EstaStock)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EstaStock)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Foto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Foto)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Modificar", "Edit", new { id = Model.IdVehiculo }) |
+        @Html.ActionLink("Cancelar", "Index")
+    </p>
+</body>
+</html>
